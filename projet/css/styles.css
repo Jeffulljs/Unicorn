@@ -1,0 +1,326 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/************** Mes styles ***************/
+
+body * {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+}
+
+main {
+	width: 1500px;
+	margin: auto;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #fff;
+}
+
+a:link, a:visited {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 600;
+    transition: color .7s;
+}
+
+a:focus {
+	outline: 0;
+}
+
+a:hover, a:active, a:focus {
+	color: #00f3f3;
+}
+
+/************** header *************/
+
+header {
+	background-image: url(theme/header-bg.jpg);
+	height: 937px;
+	padding: 30px 165px 190px 165px;
+	color: white;
+}
+
+h1 {
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+a:hover>h1 {
+    color: white;
+}
+
+.flex a {
+    display: flex;
+    align-items: center;
+}
+
+.flex img {
+    margin-right: 20px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header ul {
+	display: flex;
+}
+
+header li {
+	margin-left: 50px;
+}
+
+blockquote {
+	text-align: center;
+	font-size: 20px;
+	line-height: 36px;
+	margin-top: 480px;
+	/* background: url(theme/guillemet.png) no-repeat center 0; */
+	padding-top: 40px;
+}
+
+blockquote:before {
+	content:url(theme/guillemet.png);
+	text-align: center;
+}
+
+.auteur {
+	font-weight: 600;
+	font-style: italic;
+	margin-top: 30px;
+}
+
+section {
+	padding: 120px 165px;
+}
+
+h2 {
+	font-size: 26px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 2px;
+	margin-bottom: 60px;
+}
+
+section p {
+	text-align: center;
+	line-height: 32px;
+}
+
+/***************** section team *************************/
+
+.flex2 {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 100px;
+}
+
+figure {
+	text-align: center;
+}
+
+figcaption {
+	margin-top: 50px;
+	line-height: 32px;
+}
+
+figcaption span {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+/********************** section facts and number *******************/
+
+.facts {
+	background-image: url(theme/facts-nbrs-bg.jpg);
+	height: 691px;
+	color: white;
+}
+
+.opacity {
+	background-color: rgba(255, 255, 255, 0.3);
+	margin-left: 170px;
+	margin-right: 170px;
+	display: flex;	
+	flex-wrap: wrap;
+}
+
+.nbrs {
+	width: 50%;
+	flex: 1 0 auto;
+	font-size: 26px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-top: 60px;
+}
+
+.nbrs:nth-of-type(3), .nbrs:nth-of-type(4) {
+	margin-bottom: 60px;
+}
+
+.nbrs span {
+	display: inline-block;
+	border-bottom: #444 solid 5px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	width: 80px;
+}
+
+/************************ section news **********************/
+
+/**** avec float *****/
+/* .droite {
+	float: right;
+	margin-left: 70px;
+	margin-bottom: 40px;
+}
+
+.gauche {
+	float: left;
+	margin-right: 70px;
+	margin-bottom: 40px;
+}
+
+article {
+	clear: both;
+} */
+
+/**** avec flex ****/
+
+.news article {
+	display: flex;
+}
+
+.news article:nth-of-type(odd) {
+	flex-direction: row-reverse;
+}
+
+.date {
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding-top: 30px;
+}
+
+h3 {
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.article {
+	margin: 0 70px;
+}
+
+/**************** footer *******************/
+
+footer {
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 65px;
+}
+
+footer p, footer .reseaux, footer nav {
+    flex: 1;
+}
+
+.reseaux {
+    text-align: center;
+}
+
+.reseaux a {
+	background-image: url(theme/reseaux.png);
+	display: inline-block;
+	width: 58px;
+	height: 50px;
+}
+
+.twitter {
+	background-position: -58px 0;
+}
+
+.rss {
+	background-position: -116px 0;
+}
+
+.facebook:hover {
+	background-position: 0 -50px;
+}
+
+.twitter:hover {
+	background-position: -58px -50px;
+}
+
+.rss:hover {
+	background-position: -116px -50px;
+}
+
+footer ul {
+	display: flex;
+    justify-content: flex-end;
+}
+
+footer ul a:link {
+	font-size: 16px;
+}
+
+footer li {
+	margin-left: 30px;
+}
